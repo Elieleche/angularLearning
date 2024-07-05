@@ -5,7 +5,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FaceSnapsService } from '../services/face-snaps.service';
 import { FaceSnap } from '../models/face-snap';
 
-
 @Component({
   selector: 'app-add-face-snap',
   standalone: true,

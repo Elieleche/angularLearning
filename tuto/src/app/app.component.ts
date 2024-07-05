@@ -8,16 +8,15 @@ import { AddFaceSnapComponent } from './add-face-snap/add-face-snap.component';
   selector: 'app-root',
   standalone: true,
   imports: [
-	HeaderComponent,
-	RouterOutlet,
-  AddFaceSnapComponent,
-  ReactiveFormsModule
-],
+    HeaderComponent,
+    RouterOutlet,
+    AddFaceSnapComponent,
+    ReactiveFormsModule,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
   isDarkMode: boolean = false;
 
   ngOnInit() {
@@ -37,17 +36,19 @@ export class AppComponent {
       localStorage.setItem('dark-mode', 'false');
     }
   }
-    title = 'tuto';
-    @HostListener('document:click', ['$event'])
-    onDocumentClick(event: Event): void {
-      const target = event.target as HTMLElement;
-      if (target && target.classList.contains('btn-add-snap')) {
-        event.preventDefault();
-        if (document.getElementById('addFaceSnap')) {
-          document.getElementById('addFaceSnap')?.scrollIntoView({ behavior: 'smooth' });
-        } else {
-          window.location.href = '/facesnaps#addFaceSnap';
-        }
+
+  title = 'tuto';
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event): void {
+    const target = event.target as HTMLElement;
+    if (target && target.classList.contains('btn-add-snap')) {
+      event.preventDefault();
+      if (document.getElementById('addFaceSnap')) {
+        document.getElementById('addFaceSnap')?.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.href = '/facesnaps#addFaceSnap';
       }
     }
+  }
 }

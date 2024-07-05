@@ -1,0 +1,26 @@
+::ng-deep {
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+  
+    header {
+      background-color: var(--header-background-color);
+      color: var(--header-text-color);
+    }
+  
+    button {
+      background-color: var(--button-background-color);
+      color: var(--button-text-color);
+    }
+  
+    .dark-mode {
+      --background-color: #121212;
+      --text-color: #e0e0e0;
+      --header-background-color: #1e1e1e;
+      --header-text-color: #e0e0e0;
+      --button-background-color: #3e3e3e;
+      --button-text-color: #ffffff;
+    }
+  }
+  

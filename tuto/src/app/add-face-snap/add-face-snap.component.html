@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card">
+      <div class="card-header">Add a New FaceSnap</div>
+      <div class="card-body">
+        <form [formGroup]="faceSnapForm" (ngSubmit)="onSubmit()">
+          <div>
+            <label for="title">Title:</label>
+            <input id="title" formControlName="title">
+          </div>
+          <div>
+            <label for="imageUrl">Image URL:</label>
+            <input id="imageUrl" formControlName="imageUrl">
+          </div>
+          <div>
+            <label for="description">Description:</label>
+            <input id="description" formControlName="description">
+          </div>
+          <div>
+            <label for="location">Location:</label>
+            <input id="location" formControlName="location">
+          </div>
+          <button type="submit">Add FaceSnap</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

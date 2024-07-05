@@ -1,0 +1,32 @@
+{
+    "faceSnaps": [
+      {
+        "id": "1",
+        "title": "Angular",
+        "description": "Découvrez notre langage",
+        "imageUrl": "https://cdn.pixabay.com/photo/2015/09/17/16/40/book-944462_960_720.jpg",
+        "createdDate": "2024-06-22T10:57:00.000Z",
+        "snaps": 254,
+        "location": ""
+      },
+      {
+        "id": "2",
+        "title": "Elie",
+        "description": "Ma première semaine de stage",
+        "imageUrl": "https://cdn.pixabay.com/photo/2020/09/27/13/15/data-5606639_960_720.jpg",
+        "createdDate": "2024-06-22T10:57:00.000Z",
+        "snaps": 102,
+        "location": "tour oxygène lyon part dieu"
+      },
+      {
+        "id": "3",
+        "title": "18Noam",
+        "description": "MacCain vie !",
+        "imageUrl": "https://cdn.pixabay.com/photo/2024/06/22/10/57/french-fries-8845973_1280.jpg",
+        "createdDate": "2024-06-22T10:57:00.000Z",
+        "snaps": 154,
+        "location": "mac cain mattougues"
+      }
+    ]
+  }
+  

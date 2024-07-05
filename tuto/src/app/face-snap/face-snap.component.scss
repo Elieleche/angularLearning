@@ -1,0 +1,85 @@
+.face-snap-card {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      background-color: #f0f0f0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.snapped {
+  background-color: rgba(144, 238, 144, 0.2);
+  color: darkgreen;
+
+  button {
+    border: 1px solid lightgreen;
+    background-color: rgba(144, 238, 144, 0.2);
+    color: darkgreen;
+    box-shadow: 0 2px 4px rgba(144, 238, 144, 0.3);
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(144, 238, 144, 0.3);
+    }
+
+    &:active {
+      box-shadow: 0 2px 4px rgba(144, 238, 144, 0.5);
+    }
+  }
+}

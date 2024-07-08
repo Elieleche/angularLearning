@@ -1,0 +1,4 @@
+<div class="face-snap-card" *ngIf="faceSnap$ | async as faceSnap" [ngClass]="{ snapped: buttonText === 'Oops, unSnap!' }">
+    <h1>{{ faceSnap.title }}</h1>
+    <p>{{ faceSnap.createdAt }}</p>
+</div>

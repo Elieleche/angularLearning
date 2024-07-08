@@ -1,9 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FaceSnapsService } from '../services/face-snaps.service';
 import { FaceSnap } from '../models/face-snap';
-import { Subscription } from 'rxjs';
+import { interval, Subscription } from 'rxjs';
 import { FaceSnapComponent } from '../face-snap/face-snap.component';
 import { AddFaceSnapComponent } from '../add-face-snap/add-face-snap.component';
+import { tap, take } from 'rxjs';
 
 @Component({
   selector: 'app-face-snap-list',
@@ -25,6 +26,10 @@ export class FaceSnapListComponent implements OnInit, OnDestroy {
     this.faceSnapsSub = this.faceSnapService.faceSnaps$.subscribe((faceSnaps) => {
       this.faceSnaps = faceSnaps;
     });
+    interval(1000).pipe(
+      take(3),
+      tap(console.log)
+    ).subscribe();
   }
 
   ngOnDestroy(): void {

@@ -9,8 +9,10 @@
         <p>Localisation non specifée</p>
     }
     <p>
-        <button (click)="onSnap()" >{{ snapButtonText }}</button>
         <span [ngStyle]="{ color: 'rgb(0, '+ faceSnap.snaps +' , 0)' }" >🤌 {{ faceSnap.snaps }}</span>
+        <button (click)="onSnap(faceSnap.id)">{{ snapButtonText }}</button>
+        <button (click)="onViewFaceSnap()">VIEW</button>
+        <button>DELETE</button>
     </p>
 </div>
     

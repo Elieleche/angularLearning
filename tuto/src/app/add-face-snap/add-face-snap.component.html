@@ -1,27 +1,32 @@
 <div class="container">
-    <div class="card">
-      <div class="card-header">Add a New FaceSnap</div>
-      <div class="card-body">
-        <form [formGroup]="faceSnapForm" (ngSubmit)="onSubmit()">
-          <div>
-            <label for="title">Title:</label>
-            <input id="title" formControlName="title">
-          </div>
-          <div>
-            <label for="imageUrl">Image URL:</label>
-            <input id="imageUrl" formControlName="imageUrl">
-          </div>
-          <div>
-            <label for="description">Description:</label>
-            <input id="description" formControlName="description">
-          </div>
-          <div>
-            <label for="location">Location:</label>
-            <input id="location" formControlName="location">
-          </div>
-          <button type="submit">Add FaceSnap</button>
-        </form>
-      </div>
+  <div class="card">
+    <div class="card-header">Add a New FaceSnap</div>
+    <div class="card-body">
+      <form [formGroup]="faceSnapForm" (ngSubmit)="onSubmit()">
+        <div>
+          <input id="title" formControlName="title" placeholder="Title">
+        </div>
+        <div>
+          <input id="imageUrl" formControlName="imageUrl" placeholder="Image URL">
+        </div>
+        <div>
+          <input id="description" formControlName="description" placeholder="Description">
+        </div>
+        <div>
+          <input id="location" formControlName="location" placeholder="Location">
+        </div>
+      </form>
+    </div>
+    <div class="card-footer">
+      <button type="submit" (click)="onSubmit()" >Add FaceSnap</button>
     </div>
   </div>
-  
+  <div class="face-snap-card" *ngIf="faceSnapPreview$ | async as faceSnap">
+    <h2>{{ faceSnap.title | uppercase }}</h2>
+    <p>Mis en ligne {{ faceSnap.createdAt | date: 'à HH:mm, le d MMMM yyyy' }}</p>
+    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
+    <p>{{ faceSnap.description }}</p>
+    <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
+  </div>
+
+</div>

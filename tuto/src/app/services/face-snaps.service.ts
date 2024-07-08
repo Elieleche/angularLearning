@@ -49,4 +49,9 @@ snapFaceSnapById(faceSnapId: string, snapType: 'snap' | 'unsnap'): Observable<Fa
     console.log("passe");
     this.http.post<FaceSnap>(this.apiUrl, faceSnap).subscribe(() => this.fetchFaceSnaps());
   }
+
+  deleteFaceSnapById(faceSnapId: string) {
+    console.log(`delete this one : ${faceSnapId}`);
+    this.http.delete<FaceSnap>(`http://localhost:3000/faceSnaps/${faceSnapId}`).subscribe(() => this.fetchFaceSnaps())
+  }
 }

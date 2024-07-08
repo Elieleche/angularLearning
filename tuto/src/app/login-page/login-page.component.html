@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+              <div>
+                <input id="email" formControlName="Email" placeholder="Email">
+              </div>
+              <div>
+                <input id="code" formControlName="Code" placeholder="Mot de passe">
+              </div>
+            </form>
+          </div>
+          <div class="card-footer">
+            <button type="submit" (click)="onSubmit()" >Connexion</button>
+          </div>
+    </div>
+</div>

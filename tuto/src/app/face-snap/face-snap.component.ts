@@ -63,4 +63,9 @@ export class FaceSnapComponent {
 	onViewFaceSnap() {
 		this.router.navigateByUrl(`facesnaps/${this.faceSnap.id}`);
 	}
-}
+
+	deleteById(id: string) {7
+		console.log(id);
+		this.faceSnapService.deleteFaceSnapById(id);
+	}
+ }

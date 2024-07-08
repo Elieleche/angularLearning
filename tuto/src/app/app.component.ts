@@ -24,6 +24,10 @@ export class AppComponent implements OnInit {
   isDarkMode: boolean = false;
 
   interval$!: Observable<string>;
+  constructor() {
+    this.title = "tuto";
+  
+      }
   ngOnInit() {
 /*    this.interval$ = interval(1000).pipe(
       filter(value => value % 3 === 0),
@@ -33,7 +37,9 @@ export class AppComponent implements OnInit {
       ),
       tap(text => this.logger(text))
     );
+    
 */
+
     this.isDarkMode = localStorage.getItem('dark-mode') === 'true';
     if (this.isDarkMode) {
       document.body.classList.add('dark-mode');

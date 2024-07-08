@@ -12,7 +12,7 @@
         <span [ngStyle]="{ color: 'rgb(0, '+ faceSnap.snaps +' , 0)' }" >🤌 {{ faceSnap.snaps }}</span>
         <button (click)="onSnap(faceSnap.id)">{{ snapButtonText }}</button>
         <button (click)="onViewFaceSnap()">VIEW</button>
-        <button>DELETE</button>
+        <button (click)="deleteById(faceSnap.id)">DELETE</button>
     </p>
 </div>
     
